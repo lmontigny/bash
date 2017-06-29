@@ -12,7 +12,7 @@
 # Step 1: Parameters
 #-------------------------------------------------
 GPU_0=4  #choose GPU CUDA_VISIBLE_DEVICES
-NFX=/home/lmontigny/nfx/test.bin
+NFX=/home/lmontigny/test.bin
 START_INIT=$SECONDS
 
 # Folder
@@ -24,18 +24,9 @@ SCRIPT_FOLDER="postprocessing"
 # The Step 3 is using this array as well
 # Each line can be commented out with #
 cfgfile=( 
-          "simulation/9-1-18-03_CouetteFlow_2D/couette_2D_x1L_dx2en5_viscM1997.cfg"  
-          "simulation/9-1-18-05_PoiseuilleFlow_2D/poiseuille_2D_x1L_dx2en5_viscM1997.cfg"
-          "simulation/9-1-18-07_Dambreak_3D/dambreak_3D_H300_wG_dx0005_viscM1997.cfg"
-          "simulation/9-1-18-08_SurfaceTension/laplace/surf_ten_test_per_2D/surf_ten_test_per.cfg"
-          "simulation/9-1-18-09_TemperatureEquation/2_walls/2_walls.cfg"
-          "simulation/9-1-18-10_ViscTempCoupling/coupled_viscosity/sutherland/flowBtwnMovPlts.cfg"
-          "simulation/9-1-18-02_LidDrivenCavity_2D/cavity_2D_re100_dx1en5_viscM1997.cfg"
-          "simulation/9-1-18-02_LidDrivenCavity_2D/cavity_2D_re10000_dx1en5_viscM1997.cfg"
-          "simulation/9-1-18-06_BackwardFacingStep_2D/step_2D_dx163en4_viscM1997.cfg"
-          "simulation/9-1-18-04_FlowAroundCylinder_2D/cylinder_2D_re1_dx1en3_viscM1997.cfg"
-          "simulation/9-1-18-02_LidDrivenCavity_2D/cavity_2D_re100_dx2en5_viscM1997.cfg"
-          "simulation/9-1-18-02_LidDrivenCavity_2D/cavity_2D_re10000_dx1en5_viscM1997.cfg"
+          "simulation/test1/simu1.cfg"
+          "simulation/test2/simu2.cfg"
+          "simulation/test2/RPM1/simu1.cfg"
        )
 
 folder=(${cfgfile[@]%/*}) #remove /nameOfFile.cfg from cfgfile array
