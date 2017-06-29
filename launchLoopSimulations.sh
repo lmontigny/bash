@@ -20,7 +20,7 @@ do
     rm -f tmp
 
     # Launch simulation
-    CUDA_VISIBLE_DEVICES=0,6 mpiexec --mca btl_smcuda_use_cuda_ipc 0 -np 2 ~/nfx/build/nanoFluidXmGPU.bin -i $file_out > noh | echo "$RPM running"
+    CUDA_VISIBLE_DEVICES=0,6 mpiexec --mca btl_smcuda_use_cuda_ipc 0 -np 2 ~/nfx/build/test.bin -i $file_out > noh | echo "$RPM running"
 
     # Postprocessing
     ./torque_comparison.sh $RPM
